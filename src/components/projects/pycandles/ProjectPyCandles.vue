@@ -10,7 +10,7 @@
     <v-col cols="12" md="6">
       <ProjectInfo :project="project">
         <template #title>
-          <span class="title text-green">Chompy</span>
+          <span class="title">PyCandles</span>
         </template>
 
         <!-- Only embed the thumbnail in the project info section for xs/sm viewports -->
@@ -38,9 +38,6 @@ import Thumbnail from '@/components/Thumbnail'
 
 import imageThumbnail from './images/tn.png'
 import img1 from './images/01.png'
-import img2 from './images/02.png'
-import img3 from './images/03.png'
-import img4 from './images/04.png'
 
 const props = defineProps({
   flipped: {
@@ -51,13 +48,13 @@ const props = defineProps({
 
 const { smAndDown } = useDisplay()
 
-const projectImages = [img1, img2, img3, img4]
+const projectImages = [img1]
 const project = {
-  title: 'Chompy',
-  subtitle: 'Treacherous letter-guessing game.',
+  title: 'PyCandles',
+  subtitle: 'Stock price visualizer.',
   repoPrimary: {
-    title: 'Chompy',
-    url: 'https://github.com/dlom123/chompy',
+    title: 'PyCandles',
+    url: 'https://github.com/dlom123/pycandles',
     demoUrl: '',
   },
   otherRepos: [],
@@ -77,6 +74,6 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .title {
-  font-family: 'monospace'
+  text-shadow: 0 0 3px red, 0 0 5px orange;
 }
 </style>

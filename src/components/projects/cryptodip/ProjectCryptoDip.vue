@@ -10,8 +10,8 @@
     <v-col cols="12" md="6">
       <ProjectInfo :project="project">
         <template #title>
-          <span class="blue">Crypto</span>
-          <span class="red">Dip</span>
+          <span class="text-blue">Crypto</span>
+          <span class="text-red">Dip</span>
         </template>
 
         <!-- Only embed the thumbnail in the project info section for xs/sm viewports -->
@@ -82,13 +82,3 @@ onMounted(() => {
   })
 })
 </script>
-
-<style lang="scss" scoped>
-.blue {
-  color: #1976d2;
-}
-
-.red {
-  color: #f44336;
-}
-</style>

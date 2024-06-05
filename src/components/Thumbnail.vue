@@ -1,6 +1,6 @@
 <template>
   <v-hover v-slot="{ isHovering, props }">
-    <v-img v-bind="props" :src="src" class="rounded">
+    <v-img v-bind="props" :src="src" class="rounded border-md border-variant border-opacity-25">
       <v-overlay :model-value="isHovering" contained scrim="black" opacity="0.2"
         class="align-center justify-center cursor-pointer" @click="openGallery">
         <v-icon icon="mdi-image-multiple" size="x-large" color="secondary"></v-icon>
@@ -10,8 +10,8 @@
 
   <v-overlay v-model="showGallery" width="100%" height="100vh" scrim="black" opacity="0.8"
     @afterLeave="handleAfterLeaveGallery">
-    <v-carousel :model-value="currentImage" show-arrows="hover" hide-delimiter-background theme="light"
-      style="height: 100vh;">
+    <v-carousel :model-value="currentImage" :show-arrows="galleryImages.length > 1 ? 'hover' : false"
+      hide-delimiter-background :hide-delimiters="!(galleryImages.length > 1)" theme="light" style="height: 100vh;">
       <template #prev>
         <v-btn icon="mdi-chevron-left" @click.stop="handleClickPrev" />
       </template>

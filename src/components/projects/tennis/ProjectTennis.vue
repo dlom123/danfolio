@@ -1,7 +1,7 @@
 <template>
   <v-row class="px-4">
     <!-- BEGIN left-side image -->
-    <v-col v-if="!smAndDown && !flipped" cols="12" md="6" class="align-self-end">
+    <v-col v-if="!smAndDown && !flipped" cols="12" md="6">
       <Thumbnail :src="project.imageThumbnail" :galleryImages="project.otherImages" />
     </v-col>
     <!-- END left-side image -->
@@ -10,7 +10,7 @@
     <v-col cols="12" md="6">
       <ProjectInfo :project="project">
         <template #title>
-          <span class="title text-green">Chompy</span>
+          <span class="title">Tennis!</span>
         </template>
 
         <!-- Only embed the thumbnail in the project info section for xs/sm viewports -->
@@ -22,7 +22,7 @@
     <!-- END project info -->
 
     <!-- BEGIN right-side image -->
-    <v-col v-if="!smAndDown && flipped" cols="12" md="6" class="align-self-end">
+    <v-col v-if="!smAndDown && flipped" cols="12" md="6">
       <Thumbnail :src="project.imageThumbnail" :galleryImages="project?.otherImages" />
     </v-col>
     <!-- END right-side image -->
@@ -41,6 +41,8 @@ import img1 from './images/01.png'
 import img2 from './images/02.png'
 import img3 from './images/03.png'
 import img4 from './images/04.png'
+import img5 from './images/05.png'
+import img6 from './images/06.png'
 
 const props = defineProps({
   flipped: {
@@ -51,16 +53,22 @@ const props = defineProps({
 
 const { smAndDown } = useDisplay()
 
-const projectImages = [img1, img2, img3, img4]
+const projectImages = [img1, img2, img3, img4, img5, img6]
 const project = {
-  title: 'Chompy',
-  subtitle: 'Treacherous letter-guessing game.',
+  title: 'Tennis!',
+  subtitle: 'Tennis management tool.',
   repoPrimary: {
-    title: 'Chompy',
-    url: 'https://github.com/dlom123/chompy',
+    title: 'Tennis App',
+    url: 'https://github.com/dlom123/tennis-app',
     demoUrl: '',
   },
-  otherRepos: [],
+  otherRepos: [
+    {
+      title: 'Tennis API',
+      url: 'https://github.com/dlom123/tennis-api',
+      demoUrl: '',
+    },
+  ],
   imageThumbnail,
   otherImages: [],
 }
@@ -77,6 +85,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .title {
-  font-family: 'monospace'
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: green;
 }
 </style>

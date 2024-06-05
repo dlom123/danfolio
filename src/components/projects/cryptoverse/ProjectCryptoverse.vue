@@ -9,6 +9,10 @@
     <!-- BEGIN project info -->
     <v-col cols="12" md="6">
       <ProjectInfo :project="project">
+        <template #title>
+          <span class="title text-yellow">Cryptoverse</span>
+        </template>
+
         <!-- Only embed the thumbnail in the project info section for xs/sm viewports -->
         <template v-if="smAndDown" #image>
           <Thumbnail :src="project.imageThumbnail" :galleryImages="project.otherImages" />
@@ -72,3 +76,10 @@ onMounted(() => {
   })
 })
 </script>
+
+<style lang="scss" scoped>
+.title {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: orange;
+}
+</style>

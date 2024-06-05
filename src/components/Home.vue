@@ -31,6 +31,9 @@ import ProjectAlgoStruct from '@/components/projects/algostruct/ProjectAlgoStruc
 import ProjectChompy from '@/components/projects/chompy/ProjectChompy'
 import ProjectCryptoDip from '@/components/projects/cryptodip/ProjectCryptoDip'
 import ProjectCryptoverse from '@/components/projects/cryptoverse/ProjectCryptoverse'
+import ProjectPycade from '@/components/projects/pycade/ProjectPycade'
+import ProjectPyCandles from '@/components/projects/pycandles/ProjectPyCandles'
+import ProjectTennis from '@/components/projects/tennis/ProjectTennis'
 
 const showOverlay = ref(false)
 const currentImage = ref(null)
@@ -40,6 +43,9 @@ const projectComponents = [
   ProjectChompy,
   ProjectCryptoDip,
   ProjectCryptoverse,
+  ProjectPycade,
+  ProjectPyCandles,
+  ProjectTennis,
 ]
 // const projects = [
 //   { title: 'Chompy', repo: 'https://github.com/dlom123/chompy' },
