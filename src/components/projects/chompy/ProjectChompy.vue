@@ -17,6 +17,15 @@
         <template v-if="smAndDown" #image>
           <Thumbnail :src="project.imageThumbnail" :galleryImages="project.otherImages" />
         </template>
+
+        <template #description>
+          <p class="mb-2 mb-md-4">
+          </p>
+        </template>
+
+        <template #chips>
+          <ChipPython />
+        </template>
       </ProjectInfo>
     </v-col>
     <!-- END project info -->
@@ -30,11 +39,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
 import { useDisplay } from 'vuetify'
-
-import ProjectInfo from '@/components/projects/ProjectInfo.vue'
-import Thumbnail from '@/components/Thumbnail'
 
 import imageThumbnail from './images/tn.png'
 import img1 from './images/01.png'
@@ -55,6 +60,10 @@ const projectImages = [img1, img2, img3, img4]
 const project = {
   title: 'Chompy',
   subtitle: 'Treacherous letter-guessing game.',
+  description: [
+    'Guess the missing letters correctly to avoid plunging into the Chompster\'s chompers!',
+    'No story has ever been told of what lies beneath!'
+  ],
   repoPrimary: {
     title: 'Chompy',
     url: 'https://github.com/dlom123/chompy',

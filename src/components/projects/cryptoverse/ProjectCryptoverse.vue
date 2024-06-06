@@ -17,6 +17,13 @@
         <template v-if="smAndDown" #image>
           <Thumbnail :src="project.imageThumbnail" :galleryImages="project.otherImages" />
         </template>
+
+        <template #chips>
+          <ChipVue version="2" />
+          <ChipVuetify />
+          <ChipSass />
+          <ChipOther label="HTML Canvas" />
+        </template>
       </ProjectInfo>
     </v-col>
     <!-- END project info -->
@@ -30,11 +37,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
 import { useDisplay } from 'vuetify'
-
-import ProjectInfo from '@/components/projects/ProjectInfo.vue'
-import Thumbnail from '@/components/Thumbnail'
 
 import imageThumbnail from './images/tn.png'
 import img1 from './images/01.png'
@@ -57,6 +60,9 @@ const projectImages = [img1, img2, img3, img4, img5, img6]
 const project = {
   title: 'Cryptoverse',
   subtitle: 'Space, The hodl frontier.',
+  description: [
+    'Explore the galaxy by visiting your favorite blockchain systems and collecting memorabilia along the way!'
+  ],
   repoPrimary: {
     title: 'Cryptoverse',
     url: 'https://github.com/dlom123/cryptoverse',

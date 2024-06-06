@@ -18,6 +18,14 @@
         <template v-if="smAndDown" #image>
           <Thumbnail :src="project.imageThumbnail" :galleryImages="project.otherImages" />
         </template>
+
+        <template #chips>
+          <ChipVue version="2" />
+          <ChipVuetify />
+          <ChipSass />
+          <ChipDocker />
+          <ChipOther label="CoinMarketCap API" />
+        </template>
       </ProjectInfo>
     </v-col>
     <!-- END project info -->
@@ -31,11 +39,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
 import { useDisplay } from 'vuetify'
-
-import ProjectInfo from '@/components/projects/ProjectInfo.vue'
-import Thumbnail from '@/components/Thumbnail'
 
 import imageThumbnail from './images/tn.png'
 import img1 from './images/01.png'
@@ -58,6 +62,10 @@ const projectImages = [img1, img2, img3, img4, img5, img6]
 const project = {
   title: 'CryptoDip',
   subtitle: 'Portfolio management app for the opportunistic.',
+  description: [
+    `A privacy-first, wallet aggregation tool geared toward maximizing investment decisions. All
+    data must be entered manually, is stored only in the browser, and is never sent over the network.`,
+  ],
   repoPrimary: {
     title: 'CryptoDip',
     url: 'https://github.com/dlom123/cryptodip',

@@ -1,5 +1,5 @@
 <template>
-  <v-card variant="text" :subtitle="project.subtitle">
+  <v-card variant="text" :subtitle="project.subtitle" class="d-flex flex-column">
     <template #title>
       <h2 class="d-inline text-h4 font-weight-black">
         <slot v-if="$slots.title" name="title" />
@@ -14,20 +14,17 @@
         class="text-capitalize">Try It Out!</v-btn>
     </template>
 
-    <v-card-text class="rounded bg-surface-light pt-4 mt-4 mt-md-0">
-      <p>Description...</p>
-      <p>Description...</p>
-      <p>Description...</p>
-      <p>Description...</p>
-      <p>Description...</p>
-      <p>Description...</p>
-      <p>Description...</p>
+    <v-card-text class="rounded pa-2 mt-4 pa-md-4 pb-md-0 mt-md-0">
+      <p v-for="(p, i) in project.description" :key="i" class="mb-2 mb-md-4" v-html="p" />
     </v-card-text>
 
-    <v-card-actions class="bg-surface-light py-2 px-3 border-t-sm">
+    <v-card-actions class="py-2 px-3">
       <a :href="project.repoPrimary.url" target="_blank">
         <v-img src="@/assets/images/github-logo.png" width="32" />
       </a>
+      <v-col align="end" class="pa-0 d-flex justify-end ga-2">
+        <slot v-if="$slots.chips" cols="12" name="chips" />
+      </v-col>
     </v-card-actions>
   </v-card>
 </template>
@@ -37,15 +34,3 @@ defineProps({
   project: Object,
 })
 </script>
-
-<style lang="scss" scoped>
-.v-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.v-card-text {
-  overflow: auto;
-}
-</style>

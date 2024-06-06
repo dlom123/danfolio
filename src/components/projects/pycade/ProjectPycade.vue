@@ -17,6 +17,11 @@
         <template v-if="smAndDown" #image>
           <Thumbnail :src="project.imageThumbnail" :galleryImages="project?.otherImages" />
         </template>
+
+        <template #chips>
+          <ChipPython />
+          <ChipSQLite />
+        </template>
       </ProjectInfo>
     </v-col>
     <!-- END project info -->
@@ -30,11 +35,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
 import { useDisplay } from 'vuetify'
-
-import ProjectInfo from '@/components/projects/ProjectInfo.vue'
-import Thumbnail from '@/components/Thumbnail'
 
 import imageThumbnail from './images/tn.png'
 import img1 from './images/01.png'
@@ -67,6 +68,11 @@ const projectImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img
 const project = {
   title: 'Pycade',
   subtitle: 'A keyboard arcade adventure.',
+  description: [
+    `A collaborative effort that I lead with my students during my time as a Python instructor.
+    Browse the game gallery, play to earn tokens, and spend them on emjois in the Gift Shop to
+    bedazzle your Leaderboard status!`,
+  ],
   repoPrimary: {
     title: 'Pycade',
     url: 'https://github.com/dlom123/pycade',

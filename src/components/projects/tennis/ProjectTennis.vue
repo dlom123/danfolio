@@ -17,6 +17,15 @@
         <template v-if="smAndDown" #image>
           <Thumbnail :src="project.imageThumbnail" :galleryImages="project.otherImages" />
         </template>
+
+        <template #chips>
+          <ChipVue version="2" />
+          <ChipVuetify />
+          <ChipSass />
+          <ChipDocker />
+          <ChipOther label="REST API" />
+          <ChipPostgreSQL />
+        </template>
       </ProjectInfo>
     </v-col>
     <!-- END project info -->
@@ -57,6 +66,9 @@ const projectImages = [img1, img2, img3, img4, img5, img6]
 const project = {
   title: 'Tennis!',
   subtitle: 'Tennis management tool.',
+  description: [
+    'An app for managing tennis matches and gathering and analyzing stats.'
+  ],
   repoPrimary: {
     title: 'Tennis App',
     url: 'https://github.com/dlom123/tennis-app',

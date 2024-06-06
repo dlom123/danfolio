@@ -18,6 +18,23 @@
         <template v-if="smAndDown" #image>
           <Thumbnail :src="project.imageThumbnail" :galleryImages="project.otherImages" />
         </template>
+
+        <!-- <template #description>
+          <p class="mb-2 mb-md-4">
+            An interactive computer science playground that allows you to step through algorithms visually,
+            while outlining the steps and code involved along the way.
+          </p>
+          <p class="mb-2 mb-md-4">
+            Created as my final project for the online <a href="https://cs50.harvard.edu/x/2020/">Harvard CS50x</a>
+            course.
+          </p>
+        </template> -->
+
+        <template #chips>
+          <ChipVue version="2" />
+          <ChipVuetify />
+          <ChipSass />
+        </template>
       </ProjectInfo>
     </v-col>
     <!-- END project info -->
@@ -31,11 +48,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
 import { useDisplay } from 'vuetify'
-
-import ProjectInfo from '@/components/projects/ProjectInfo.vue'
-import Thumbnail from '@/components/Thumbnail'
 
 import imageThumbnail from './images/tn.png'
 import img1 from './images/01.png'
@@ -60,6 +73,12 @@ const projectImages = [img1, img2, img3, img4, img5, img6, img7, img8]
 const project = {
   title: 'AlgoStruct',
   subtitle: 'Computer science learning tool.',
+  description: [
+    `An interactive computer science playground that allows you to step through algorithms visually,
+    while outlining the steps and code involved along the way.`,
+    `Created as my final project for the online
+    <a href="https://cs50.harvard.edu/x/2020/" target="_blank">Harvard CS50x</a> course.`,
+  ],
   repoPrimary: {
     title: 'AlgoStruct',
     url: 'https://github.com/dlom123/algostruct',
@@ -71,6 +90,7 @@ const project = {
 }
 
 onMounted(() => {
+  console.log('HEY')
   // preload project images in order to get their width for use in the image gallery
   projectImages.forEach(projectImage => {
     const img = new Image()

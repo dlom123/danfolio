@@ -8,7 +8,7 @@
 
     <!-- BEGIN Projects section -->
     <v-row no-gutters>
-      <v-col v-for="(projectComponent, i) in projectComponents" cols="12" lg="10" offset-lg="1" xl="8" offset-xl="2">
+      <v-col v-for="(projectComponent, i) in projectComponents" cols="12" lg="10" offset-lg="1" xl="6" offset-xl="3">
 
         <!-- BEGIN project -->
         <component :is="projectComponent" :flipped="!(i % 2)" class="my-6" />

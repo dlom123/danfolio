@@ -17,6 +17,11 @@
         <template v-if="smAndDown" #image>
           <Thumbnail :src="project.imageThumbnail" :galleryImages="project.otherImages" />
         </template>
+
+        <template #chips>
+          <ChipPython />
+          <ChipOther label="Yahoo! Finance API" />
+        </template>
       </ProjectInfo>
     </v-col>
     <!-- END project info -->
@@ -30,11 +35,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
 import { useDisplay } from 'vuetify'
-
-import ProjectInfo from '@/components/projects/ProjectInfo.vue'
-import Thumbnail from '@/components/Thumbnail'
 
 import imageThumbnail from './images/tn.png'
 import img1 from './images/01.png'
@@ -52,6 +53,9 @@ const projectImages = [img1]
 const project = {
   title: 'PyCandles',
   subtitle: 'Stock price visualizer.',
+  description: [
+    'Generate a candlestick chart of stock price activity over a given duration of time.'
+  ],
   repoPrimary: {
     title: 'PyCandles',
     url: 'https://github.com/dlom123/pycandles',
