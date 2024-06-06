@@ -23,8 +23,10 @@
           <ChipVuetify />
           <ChipSass />
           <ChipDocker />
-          <ChipOther label="REST API" />
           <ChipPostgreSQL />
+          <ChipOther label="Express" />
+          <ChipOther label="REST" />
+          <ChipOther label="Sequelize" />
         </template>
       </ProjectInfo>
     </v-col>

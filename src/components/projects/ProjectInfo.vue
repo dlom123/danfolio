@@ -22,9 +22,11 @@
       <a :href="project.repoPrimary.url" target="_blank">
         <v-img src="@/assets/images/github-logo.png" width="32" />
       </a>
-      <v-col align="end" class="pa-0 d-flex justify-end ga-2">
-        <slot v-if="$slots.chips" cols="12" name="chips" />
-      </v-col>
+      <v-row gutters="2">
+        <v-col align="end" class="pa-0 ml-4">
+          <slot v-if="$slots.chips" cols="12" name="chips" />
+        </v-col>
+      </v-row>
     </v-card-actions>
   </v-card>
 </template>
