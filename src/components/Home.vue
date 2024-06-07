@@ -40,13 +40,13 @@ const showOverlay = ref(false)
 const currentImage = ref(null)
 
 const projectComponents = [
-  ProjectAlgoStruct,
-  ProjectChompy,
   ProjectCryptoDip,
+  ProjectTennis,
+  ProjectAlgoStruct,
   ProjectCryptoverse,
+  ProjectChompy,
   ProjectPycade,
   ProjectPyCandles,
-  ProjectTennis,
 ]
 // const projects = [
 //   { title: 'Chompy', repo: 'https://github.com/dlom123/chompy' },
