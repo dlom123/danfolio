@@ -22,6 +22,9 @@
       <a :href="project.repoPrimary.url" target="_blank">
         <v-img src="@/assets/images/github-logo.png" width="32" />
       </a>
+      <a v-if="project?.otherRepos.length" :href="project.otherRepos[0].url" target="_blank" class="ml-2">
+        <v-img src="@/assets/images/github-logo.png" width="32" />
+      </a>
       <v-row gutters="2">
         <v-col align="end" class="pa-0 ml-4">
           <slot v-if="$slots.chips" cols="12" name="chips" />

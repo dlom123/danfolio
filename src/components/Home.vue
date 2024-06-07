@@ -3,6 +3,7 @@
     <v-row class="mt-6">
       <v-col cols="12" class="text-center">
         <h1 class="text-h2 font-weight-bold">Daniel Lomelino</h1>
+        <a href="mailto:dlomelino@pm.me">dlomelino@pm.me</a>
       </v-col>
     </v-row>
 
