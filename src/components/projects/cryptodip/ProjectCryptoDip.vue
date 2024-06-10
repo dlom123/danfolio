@@ -67,18 +67,19 @@ const project = {
     data must be entered manually, is stored only in the browser, and is never sent over the network.`,
   ],
   repoPrimary: {
-    title: 'CryptoDip',
+    title: 'App',
     url: 'https://github.com/dlom123/cryptodip',
     demoUrl: 'https://cryptodip.app',
   },
   otherRepos: [
     {
-      title: 'CryptoDip API',
+      title: 'API',
       url: 'https://github.com/dlom123/cryptodip-api',
     },
   ],
   imageThumbnail,
   otherImages: [],
+  isResponsive: false,
 }
 
 onMounted(() => {

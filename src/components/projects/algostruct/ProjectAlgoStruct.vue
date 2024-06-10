@@ -87,10 +87,10 @@ const project = {
   otherRepos: [],
   imageThumbnail,
   otherImages: [],
+  isResponsive: false,
 }
 
 onMounted(() => {
-  console.log('HEY')
   // preload project images in order to get their width for use in the image gallery
   projectImages.forEach(projectImage => {
     const img = new Image()

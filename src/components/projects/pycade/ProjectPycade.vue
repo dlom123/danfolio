@@ -81,6 +81,7 @@ const project = {
   otherRepos: [],
   imageThumbnail,
   otherImages: [],
+  isResponsive: false,
 }
 
 onMounted(() => {

@@ -72,19 +72,20 @@ const project = {
     'An app for managing tennis matches and gathering and analyzing stats.'
   ],
   repoPrimary: {
-    title: 'Tennis App',
+    title: 'App',
     url: 'https://github.com/dlom123/tennis-app',
     demoUrl: '',
   },
   otherRepos: [
     {
-      title: 'Tennis API',
+      title: 'API',
       url: 'https://github.com/dlom123/tennis-api',
       demoUrl: '',
     },
   ],
   imageThumbnail,
   otherImages: [],
+  isResponsive: true,
 }
 
 onMounted(() => {
