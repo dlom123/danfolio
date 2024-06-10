@@ -70,7 +70,7 @@ const project = {
   subtitle: 'A keyboard arcade adventure.',
   description: [
     `A collaborative effort that I lead with my students during my time as a Python instructor.
-    Browse the game gallery, play to earn tokens, and spend them on emjois in the Gift Shop to
+    Browse the game gallery, play to earn tokens, and spend them on emojis in the Gift Shop to
     bedazzle your Leaderboard status!`,
   ],
   repoPrimary: {
