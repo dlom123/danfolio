@@ -5,7 +5,7 @@
         <v-col cols="auto" class="pa-0">
           <h2 class="d-inline text-h4 font-weight-black">
             <slot v-if="$slots.title" name="title" />
-            <span v-else>{{ project.title }}</span>
+            <span v-else>{{ project?.title }}</span>
           </h2>
         </v-col>
         <v-col v-if="showDemoButton" cols="auto" class="pa-0">
@@ -18,7 +18,7 @@
     <template #subtitle>
       <v-row no-gutters class="mb-2">
         <v-col cols="auto">
-          {{ project.subtitle }}
+          {{ project?.subtitle }}
         </v-col>
       </v-row>
     </template>
@@ -26,35 +26,21 @@
     <slot name="image" />
 
     <v-card-text class="rounded pa-2 mt-2 mt-md-0">
-      <p v-for="(p, i) in project.description" :key="i" class="mb-2 mb-md-4" v-html="p" />
+      <p v-for="(p, i) in project?.description" :key="i" class="mb-2 mb-md-4" v-html="p" />
     </v-card-text>
 
     <v-card-actions>
       <v-row no-gutters>
         <v-col v-if="project?.otherRepos.length" cols="auto">
           <v-row no-gutters>
-            <a :href="project.repoPrimary.url" target="_blank">
-              <v-chip>
-                <v-avatar start>
-                  <v-img src="@/assets/images/github-logo.png" width="32" />
-                </v-avatar>
-                {{ project.repoPrimary.title }}
-              </v-chip>
-            </a>
+            <ChipRepo :label="project?.repoPrimary.title" :href="project?.repoPrimary.url" />
           </v-row>
           <v-row no-gutters>
-            <a :href="project.otherRepos[0].url" target="_blank">
-              <v-chip>
-                <v-avatar start>
-                  <v-img src="@/assets/images/github-logo.png" width="32" />
-                </v-avatar>
-                {{ project.otherRepos[0].title }}
-              </v-chip>
-            </a>
+            <ChipRepo :label="project?.otherRepos[0].title" :href="project?.otherRepos[0].url" />
           </v-row>
         </v-col>
         <v-col v-else cols="auto">
-          <a :href="project.repoPrimary.url" target="_blank">
+          <a :href="project?.repoPrimary.url" target="_blank">
             <v-img src="@/assets/images/github-logo.png" width="32" />
           </a>
         </v-col>
