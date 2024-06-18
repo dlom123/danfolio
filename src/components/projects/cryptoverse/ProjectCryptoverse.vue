@@ -59,7 +59,7 @@ const { smAndDown } = useDisplay()
 const projectImages = [img1, img2, img3, img4, img5, img6]
 const project = {
   title: 'Cryptoverse',
-  subtitle: 'Space, The hodl frontier.',
+  subtitle: 'Space, the hodl frontier.',
   description: [
     'Explore the galaxy by visiting your favorite blockchain systems and collecting memorabilia along the way!'
   ],
