@@ -82,7 +82,7 @@ const project = {
   repoPrimary: {
     title: 'AlgoStruct',
     url: 'https://github.com/dlom123/algostruct',
-    demoUrl: '',
+    demoUrl: 'https://dlom123.github.io/algostruct',
   },
   otherRepos: [],
   imageThumbnail,
