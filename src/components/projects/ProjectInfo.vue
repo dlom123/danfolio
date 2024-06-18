@@ -75,14 +75,16 @@ const props = defineProps({
   project: Object,
 })
 
-const { smAndDown, mdAndUp } = useDisplay()
+const { mobile, smAndDown, mdAndUp } = useDisplay()
 
 const showDemoButton = computed(() => (
-  props.project?.repoPrimary?.demoUrl
+  !!props.project?.repoPrimary?.demoUrl
   && (
-    mdAndUp
+    mdAndUp.value
+    || (mobile.value && props.project?.isResponsive)
   )
-))
+)
+)
 </script>
 
 <style lang="scss" scoped>
