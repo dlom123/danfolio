@@ -66,7 +66,7 @@ const project = {
   repoPrimary: {
     title: 'Cryptoverse',
     url: 'https://github.com/dlom123/cryptoverse',
-    demoUrl: '',
+    demoUrl: 'https://dlom123.github.io/cryptoverse',
   },
   otherRepos: [],
   imageThumbnail,
