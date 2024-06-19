@@ -64,7 +64,7 @@ const project = {
     'Guess the missing letters correctly to avoid plunging into the Chompster\'s chompers!',
     'No story has ever been told of what lies beneath!',
     `
-      <div class="border-sm pa-2">
+      <div class="border-sm pa-4">
         <div class="mb-2">Try it out!</div>
         <code>
           ssh 157.245.213.39 -o PubkeyAuthentication=no -l chompy
