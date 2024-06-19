@@ -72,6 +72,16 @@ const project = {
     `A collaborative effort that I lead with my students during my time as a Python instructor.
     Browse the game gallery, play to earn tokens, and spend them on emojis in the Gift Shop to
     bedazzle your Leaderboard status!`,
+    `
+      <div class="border-sm pa-4">
+        <div class="mb-2">Try it out!</div>
+        <code>
+          ssh 157.245.213.39 -o PubkeyAuthentication=no -l pycade
+        </code>
+        <div class="mt-4 mb-1">Password</div>
+        <code>play!</code>
+      </div>
+    `,
   ],
   repoPrimary: {
     title: 'Pycade',
