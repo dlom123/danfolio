@@ -67,8 +67,10 @@ const project = {
       <div class="border-sm pa-2">
         <div class="mb-2">Try it out!</div>
         <code>
-          ssh 157.245.213.39 -o PreferredAuthentications=password -o PubkeyAuthentication=no -l chompy
+          ssh 157.245.213.39 -o PubkeyAuthentication=no -l chompy
         </code>
+        <div class="mt-4 mb-1">Password</div>
+        <code>chomp!</code>
       </div>
     `,
   ],
