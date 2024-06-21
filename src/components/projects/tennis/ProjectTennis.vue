@@ -74,7 +74,7 @@ const project = {
   repoPrimary: {
     title: 'App',
     url: 'https://github.com/dlom123/tennis-app',
-    demoUrl: '',
+    demoUrl: 'https://tennis.ameco.io/',
   },
   otherRepos: [
     {
