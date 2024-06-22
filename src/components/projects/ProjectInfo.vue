@@ -61,7 +61,7 @@ const props = defineProps({
   project: Object,
 })
 
-const { mobile, smAndDown, mdAndUp } = useDisplay()
+const { mobile, mdAndUp } = useDisplay()
 
 const showDemoButton = computed(() => (
   !!props.project?.repoPrimary?.demoUrl

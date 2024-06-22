@@ -1,12 +1,13 @@
 <template>
-  <v-hover v-slot="{ isHovering, props }">
-    <v-img v-bind="props" :src="src" class="rounded border-md border-variant border-opacity-25">
+  <v-hover v-if="!mobile" v-slot="{ isHovering, props }">
+    <v-img v-bind="props" :src="src" class="rounded border-md border-opacity-25">
       <v-overlay :model-value="isHovering" contained scrim="black" opacity="0.2"
         class="align-center justify-center cursor-pointer" @click="openGallery">
         <v-icon icon="mdi-image-multiple" size="x-large" color="secondary"></v-icon>
       </v-overlay>
     </v-img>
   </v-hover>
+  <v-img v-else :src="src" class="rounded border-md border-opacity-25" @click="openGallery" />
 
   <v-overlay v-model="showGallery" width="100%" height="100vh" scrim="black" opacity="0.8"
     @afterLeave="handleAfterLeaveGallery">
@@ -33,12 +34,15 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useDisplay } from 'vuetify'
 
 const props = defineProps({
   galleryImages: Array,
   onClick: Function,
   src: String,
 })
+
+const { mobile } = useDisplay()
 
 const currentImage = ref(0)
 const showGallery = ref(false)
