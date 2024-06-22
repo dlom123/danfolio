@@ -1,9 +1,12 @@
 <template>
   <v-container fluid class="pa-0">
-    <v-row class="mt-6">
-      <v-col cols="12" class="text-center">
+    <v-row class="mt-6 mb-md-4 justify-center">
+      <v-col cols="auto" class="text-center">
         <h1 class="text-h2 font-weight-bold">Daniel Lomelino</h1>
         <a href="mailto:dlomelino@pm.me">dlomelino@pm.me</a>
+        <v-btn color="primary" size="small" prepend-icon="mdi-file-document-outline" :href="resume" target="_blank"
+          class="text-capitalize ml-6">Resume</v-btn>
+
       </v-col>
     </v-row>
 
@@ -35,6 +38,7 @@ import ProjectCryptoverse from '@/components/projects/cryptoverse/ProjectCryptov
 import ProjectPycade from '@/components/projects/pycade/ProjectPycade'
 import ProjectPyCandles from '@/components/projects/pycandles/ProjectPyCandles'
 import ProjectTennis from '@/components/projects/tennis/ProjectTennis'
+import resume from '@/assets/resume-daniel-lomelino.pdf'
 
 const showOverlay = ref(false)
 const currentImage = ref(null)

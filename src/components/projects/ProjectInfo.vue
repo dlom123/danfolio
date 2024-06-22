@@ -9,7 +9,7 @@
           </h2>
         </v-col>
         <v-col v-if="showDemoButton" cols="auto" class="pa-0">
-          <v-btn color="primary" size="small" append-icon="mdi-open-in-new" :href="project?.repoPrimary?.demoUrl"
+          <v-btn color="secondary" size="small" append-icon="mdi-open-in-new" :href="project?.repoPrimary?.demoUrl"
             target="_blank" class="text-capitalize">Try It Out!</v-btn>
         </v-col>
       </v-row>
