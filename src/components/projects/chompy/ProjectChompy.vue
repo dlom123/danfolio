@@ -47,7 +47,7 @@ import img2 from './images/02.png'
 import img3 from './images/03.png'
 import img4 from './images/04.png'
 
-const props = defineProps({
+defineProps({
   flipped: {
     type: Boolean,
     default: false,

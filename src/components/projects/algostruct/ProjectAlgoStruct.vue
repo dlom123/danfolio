@@ -31,7 +31,7 @@
         </template> -->
 
         <template #chips>
-          <ChipVue version="2" />
+          <ChipVue />
           <ChipVuetify />
           <ChipSass />
         </template>
@@ -60,7 +60,7 @@ import img6 from './images/06.png'
 import img7 from './images/07.png'
 import img8 from './images/08.png'
 
-const props = defineProps({
+defineProps({
   flipped: {
     type: Boolean,
     default: false,

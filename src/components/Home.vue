@@ -6,13 +6,20 @@
         <a href="mailto:dlomelino@pm.me">dlomelino@pm.me</a>
         <v-btn color="primary" size="small" prepend-icon="mdi-file-document-outline" :href="resume" target="_blank"
           class="text-capitalize ml-6">Resume</v-btn>
-
       </v-col>
     </v-row>
 
     <!-- BEGIN Projects section -->
     <v-row no-gutters>
-      <v-col v-for="(projectComponent, i) in projectComponents" cols="12" lg="10" offset-lg="1" xl="6" offset-xl="3">
+      <v-col
+        v-for="(projectComponent, i) in projectComponents"
+        :key="i"
+        cols="12"
+        lg="10"
+        offset-lg="1"
+        xl="6"
+        offset-xl="3"
+      >
 
         <!-- BEGIN project -->
         <component :is="projectComponent" :flipped="!(i % 2)" class="my-6" />
@@ -22,6 +29,31 @@
       </v-col>
     </v-row>
     <!-- END Projects section -->
+    
+    <v-divider opacity="0.5" thickness="2" />
+    
+    <!-- BEGIN Honorable Mentions section -->
+    <v-row no-gutters class="py-8 bg-blue">
+      <v-col cols="12" class="text-center">
+        <h2 class="mb-4 text-h4">Honorable Mentions</h2>
+      </v-col>
+
+      <v-col
+        v-for="(projectComponent, i) in projectHonorableMentions"
+        :key="i"
+        cols="12"
+        sm="12"
+        md="6"
+        lg="5"
+        :offset-lg="!(i % 2) ? 1 : 0"
+        xl="3"
+        :offset-xl="!(i % 2) ? 3 : 0"
+        class="mt-0"
+      >
+        <component :is="projectComponent" />
+      </v-col>
+    </v-row>
+    <!-- END Honorable Mentions section -->
 
     <v-overlay v-model="showOverlay" class="align-center justify-center" @afterLeave="handleCloseOverlay">
       <img :src="currentImage" class="image" />
@@ -35,6 +67,7 @@ import ProjectAlgoStruct from '@/components/projects/algostruct/ProjectAlgoStruc
 import ProjectChompy from '@/components/projects/chompy/ProjectChompy'
 import ProjectCryptoDip from '@/components/projects/cryptodip/ProjectCryptoDip'
 import ProjectCryptoverse from '@/components/projects/cryptoverse/ProjectCryptoverse'
+import ProjectPixelDraw from '@/components/projects/honorable-mentions/ProjectPixelDraw'
 import ProjectPycade from '@/components/projects/pycade/ProjectPycade'
 import ProjectPyCandles from '@/components/projects/pycandles/ProjectPyCandles'
 import ProjectTennis from '@/components/projects/tennis/ProjectTennis'
@@ -52,23 +85,9 @@ const projectComponents = [
   ProjectPycade,
   ProjectPyCandles,
 ]
-// const projects = [
-//   { title: 'Chompy', repo: 'https://github.com/dlom123/chompy' },
-//   { title: 'CryptoVerse', repo: 'https://github.com/dlom123/cryptoverse' },
-//   { title: 'Danfolio', repo: 'https://github.com/dlom123/danfolio' },
-//   { title: 'Music App', repo: 'https://github.com/danpunk/punk-app' },
-//   { title: 'Music App API', repo: 'https://github.com/danpunk/punk-api' },
-//   { title: 'Pycade', repo: 'https://github.com/dlom123/pycade' },
-//   { title: 'PyCandle', repo: 'https://github.com/dlom123/candles' },
-//   { title: 'Scanner App', repo: 'https://github.com/danpunk/punk-utils' },
-//   { title: 'Tennis API', repo: 'https://github.com/dlom123/tennis-api' },
-//   { title: 'Tennis App', repo: 'https://github.com/dlom123/tennis-app' },
-// ]
-
-function handleClickThumbnail(image) {
-  currentImage.value = image
-  showOverlay.value = true
-}
+const projectHonorableMentions = [
+  ProjectPixelDraw,
+]
 
 function handleCloseOverlay() {
   currentImage.value = null

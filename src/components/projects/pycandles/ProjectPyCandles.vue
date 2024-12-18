@@ -40,7 +40,7 @@ import { useDisplay } from 'vuetify'
 import imageThumbnail from './images/tn.png'
 import img1 from './images/01.png'
 
-const props = defineProps({
+defineProps({
   flipped: {
     type: Boolean,
     default: false,
