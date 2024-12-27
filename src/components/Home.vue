@@ -1,13 +1,15 @@
 <template>
   <v-container fluid class="pa-0">
-    <v-row class="mt-6 mb-1 mb-md-4 justify-center">
+    <v-row class="mt-6 mb-1 mb-md-2 justify-center">
       <v-col cols="auto" class="text-center">
-        <h1 class="mb-4 text-h2 font-weight-bold">Daniel Lomelino</h1>
+        <v-avatar image="@/assets/images/avatar.png" size="200" class="mb-3" />
+        <h1 class="mb-2 text-h3 font-weight-bold">Daniel Lomelino</h1>
         <a href="mailto:dlomelino@pm.me">dlomelino@pm.me</a>
         <v-btn color="primary" size="small" prepend-icon="mdi-file-document-outline" :href="resume" target="_blank"
-          class="text-capitalize ml-6">Resume</v-btn>
+        class="text-capitalize ml-6">Resume</v-btn>
       </v-col>
     </v-row>
+    <v-divider opacity="0.2" thickness="2" />
 
     <!-- BEGIN Projects section -->
     <v-row no-gutters>
