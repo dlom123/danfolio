@@ -79,6 +79,10 @@ const project = {
     `Created as my final project for the online
     <a href="https://cs50.harvard.edu/x/2020/" target="_blank">Harvard CS50x</a> course.`,
   ],
+  highlights: [
+    'Visual representation of essential computer science algorithms.',
+    'Tracks algorithm steps through real lines of code.'
+  ],
   repoPrimary: {
     title: 'AlgoStruct',
     url: 'https://github.com/dlom123/algostruct',

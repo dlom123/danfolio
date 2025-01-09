@@ -66,6 +66,12 @@ const project = {
     `A privacy-first, wallet aggregation tool geared toward maximizing investment decisions. All
     data must be entered manually, is stored only in the browser, and is never sent over the network.`,
   ],
+  highlights: [
+    'Privacy first &mdash; your data never leaves the browser!',
+    'Fun, feature-rich UI.',
+    '<a href="https://coinmarketcap.com/api/" target="_blank">CoinMarketCap API</a> integration.',
+    'CSV export/import.',
+  ],
   repoPrimary: {
     title: 'App',
     url: 'https://github.com/dlom123/cryptodip',

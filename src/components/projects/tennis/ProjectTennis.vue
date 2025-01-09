@@ -71,6 +71,10 @@ const project = {
   description: [
     'An app for managing tennis matches and gathering and analyzing stats.'
   ],
+  highlights: [
+    'Fully mobile responsive!',
+    'Sleek, feature-rich UI.',
+  ],
   repoPrimary: {
     title: 'App',
     url: 'https://github.com/dlom123/tennis-app',

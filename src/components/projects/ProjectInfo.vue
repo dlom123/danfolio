@@ -29,6 +29,17 @@
       <p v-for="(p, i) in project?.description" :key="i" class="mb-2 mb-md-4" v-html="p" />
     </v-card-text>
 
+    <v-card-text v-if="project?.highlights" class="rounded pa-2">
+      <h4>Highlights</h4>
+      <ul class="ml-4 mb-2 mb-md-4">
+        <li v-for="(p, i) in project?.highlights" :key="i" v-html="p" />
+      </ul>
+    </v-card-text>
+
+    <v-card-text v-if="project?.instructions" class="rounded pa-2 mt-2 mt-md-0">
+      <p v-for="(p, i) in project?.instructions" :key="i" class="mb-2 mb-md-4" v-html="p" />
+    </v-card-text>
+
     <v-card-actions>
       <v-row no-gutters>
         <v-col v-if="project?.otherRepos.length" cols="auto">

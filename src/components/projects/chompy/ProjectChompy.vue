@@ -1,7 +1,7 @@
 <template>
   <v-row class="px-4">
     <!-- BEGIN left-side image -->
-    <v-col v-if="!smAndDown && !flipped" cols="12" md="6" class="align-self-end">
+    <v-col v-if="!smAndDown && !flipped" cols="12" md="6">
       <Thumbnail :src="project.imageThumbnail" :galleryImages="project.otherImages" />
     </v-col>
     <!-- END left-side image -->
@@ -31,7 +31,7 @@
     <!-- END project info -->
 
     <!-- BEGIN right-side image -->
-    <v-col v-if="!smAndDown && flipped" cols="12" md="6" class="align-self-end">
+    <v-col v-if="!smAndDown && flipped" cols="12" md="6">
       <Thumbnail :src="project.imageThumbnail" :galleryImages="project?.otherImages" />
     </v-col>
     <!-- END right-side image -->
@@ -63,6 +63,12 @@ const project = {
   description: [
     'Guess the missing letters correctly to avoid plunging into the Chompster\'s chompers!',
     'No story has ever been told of what lies beneath!',
+  ],
+  highlights: [
+    'Game programming concepts.',
+    'Terminal-based user interface.',
+  ],
+  instructions: [
     `
       <div class="border-sm pa-4">
         <div class="mb-2">Try it out!</div>

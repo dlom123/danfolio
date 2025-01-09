@@ -63,6 +63,13 @@ const project = {
   description: [
     'Explore the galaxy by visiting your favorite blockchain systems and collecting memorabilia along the way!'
   ],
+  highlights: [
+    'Rich usage of the HTML canvas.',
+    'Fly a rocket around the screen and interact with objects.',
+    'Dynamically-generated solar system gradients derived from image RGB values!',
+    'Vanilla JavaScript classes integrated into Vue.js.',
+    'Fun, game-like feel and UI.',
+  ],
   repoPrimary: {
     title: 'Cryptoverse',
     url: 'https://github.com/dlom123/cryptoverse',

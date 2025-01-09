@@ -1,7 +1,7 @@
 <template>
   <v-row class="px-4">
     <!-- BEGIN left-side image -->
-    <v-col v-if="!smAndDown && !flipped" cols="12" md="6" class="align-self-end">
+    <v-col v-if="!smAndDown && !flipped" cols="12" md="6" class="align-self-start">
       <Thumbnail :src="project.imageThumbnail" :galleryImages="project.otherImages" />
     </v-col>
     <!-- END left-side image -->
@@ -27,7 +27,7 @@
     <!-- END project info -->
 
     <!-- BEGIN right-side image -->
-    <v-col v-if="!smAndDown && flipped" cols="12" md="6" class="align-self-end">
+    <v-col v-if="!smAndDown && flipped" cols="12" md="6" class="align-self-start">
       <Thumbnail :src="project.imageThumbnail" :galleryImages="project?.otherImages" />
     </v-col>
     <!-- END right-side image -->
@@ -55,6 +55,10 @@ const project = {
   subtitle: 'Stock price visualizer.',
   description: [
     'Generate a candlestick chart of stock price activity over a given duration of time.'
+  ],
+  highlights: [
+    'GUI programming.',
+    'Yahoo! Finance API integration.',
   ],
   repoPrimary: {
     title: 'PyCandles',
